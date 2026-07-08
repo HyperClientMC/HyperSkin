@@ -11,6 +11,7 @@
 		"build:docs": "typedoc src/viewer.ts",
 		"build:preview": "vite build",
 		"build": "npm-run-all --parallel build:modules build:bundles build:preview",
+		"prepare": "npm run build:modules",
 		"format": "prettier src examples eslint.config.js --write",
 		"test:lint": "eslint src examples eslint.config.js",
 		"test": "npm run test:lint",
